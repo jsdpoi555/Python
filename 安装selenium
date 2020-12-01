@@ -1,0 +1,3 @@
+摘自https://blog.csdn.net/keneyr/article/details/79315767
+首先下载chrome驱动chromedriver.exe。找了好久终于在csdn上找到一个资源，然后下载zip文件，解压得到exe。把该exe文件放入chrome的路径下，比如本人的路径是C:\Program Files (x86)\Google\Chrome\Application\，在高级系统环境设置的path里面加入这个路径，如图：
+然后在spyder下加入selenium，很简单，在cmd窗口下用pip就行：pip install selenium
