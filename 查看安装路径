@@ -1,0 +1,5 @@
+转自https://www.jb51.net/article/164490.htm
+打开我们的cmd命令
+输入Python
+输入 import sys
+输入 print(sys.path)
