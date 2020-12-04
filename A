@@ -1,0 +1,3 @@
+for link in browser.find_elements_by_xpath("//*[@value]"):
+    print (link.get_attribute('value'))
+browser.close()
