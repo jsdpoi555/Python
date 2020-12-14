@@ -1,3 +1,8 @@
 http://www.pyinstaller.org/downloads.html
 
+pip install pyinstaller
+
 pip install https://github.com/pyinstaller/pyinstaller/archive/develop.tar.gz
+
+
+pyinstaller C:\Users\tangjiasi\PY3\订单明细.py
