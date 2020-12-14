@@ -6,3 +6,6 @@ pip install https://github.com/pyinstaller/pyinstaller/archive/develop.tar.gz
 
 
 pyinstaller C:\Users\tangjiasi\PY3\订单明细.py
+
+
+pyinstaller C:\Users\tangjiasi\PY3\易派客订单明细链接.py
