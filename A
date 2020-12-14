@@ -68,3 +68,32 @@ print('Length : %d' % len(dict))
 
 
 win32api.MessageBox(0, "处理完成", "提醒",win32con.MB_OK)
+
+
+
+
+if EC.title_contains(order_id):
+  n0=browser.find_element_by_xpath('.//ul[@class="detail-list"]/li[1]').get_attribute('textContent')#订单编号
+  # /html/body/div[5]/div/div[4]/div[2]/div[2]/div/ul/li[1]/text()
+  n0=''.join(n0.split())
+  n0=n0.replace('订单编号：','')
+  # print(n0)
+  n1=browser.find_element_by_class_name('meetsBox-icon').get_attribute('textContent')#发货状态
+  n1=''.join(n1.split())
+  # print(n1)
+  n2=browser.find_element_by_xpath('.//div[@class="einbox einpay-pay"]/p[1]').get_attribute('textContent')#付款方式
+  n2=''.join(n2.split())
+  n2=n2.replace('备注：','|备注：')
+  # /html/body/div[5]/div/div[4]/div[2]/div[4]/div[1]/p/text()
+  # print(n2)
+  n3=browser.find_element_by_xpath('.//div[@class="orderDetail-footTable"]/p/i').get_attribute('textContent')#总金额
+  # n3=browser.find_element_by_xpath('/html/body/div[5]/div/div[4]/div[2]/div[8]/div[2]/div[2]/div[1]/p/i').get_attribute('textContent')#总金额
+  # /html/body/div[5]/div/div[4]/div[2]/div[8]/div[2]/div[2]/div[1]/p/i                                                                        
+  n3='订单金额：' + ''.join(n3.split())
+  # print(n3)
+  n4=browser.find_element_by_xpath('.//div[@class="einbox"]/p[2]/span').get_attribute('textContent')#要求到货时间
+  # n4=browser.find_element_by_xpath('/html/body/div[5]/div/div[4]/div[2]/div[4]/div[2]/p[2]/span').get_attribute('textContent')#要求到货时间
+  # /html/body/div[5]/div/div[4]/div[2]/div[4]/div[2]/p[2]/span/text()
+  # print(n4)
+  n = n0 + '|' + n1 + '|' + n2 + '|' + n3 + '|' + n4
+  print(n)
